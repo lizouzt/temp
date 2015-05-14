@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<title>BTEngine-免费的BT种子搜索神器、P2P种子搜索器、万能BT种子搜索下载神器、磁力链接搜索下载</title>
+<meta name="keywords" content="bt种子搜索,bt种子搜索器,bt种子下载,p2p种子搜索器,p2p种子搜索神器,磁力链接,磁力搜索,万能种子搜索器,迅雷种子,种子搜索器,种子搜索神器,种子搜索神器手机版,种子搜索网站,种子下载,BT种子,bt种子下载器,bt搜索引擎,bt搜索器,bt搜索神器">
+<meta name="description" content="BTEngine - 专注于从DHT网络抓取BT种子和磁力链接，目前索引了数千万BT种子元信息(metainfo)，是宇宙BT种子资源最丰富的BT种子搜索下载、磁力链接下载的专业网站,你可以在这里搜索和下载电影、剧集、音乐、图书、图片、综艺、软件、动漫、教程、游戏等资源，我这是一款BT种子搜索神器、P2P种子搜索神器、万能BT种子搜索下载神器、磁力链接搜索下载。本站本身不存储提供BT种子下载，仅提供从DHT网络抓取的磁力链接以及其他网站提供的下载链接。">
+<link rel="stylesheet" type="text/css" href="../src/p/index/index.css">
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" src="../bower_components/requirejs/require.js"></script>
+<script type="text/javascript">
+    var bower = require.config({
+        context: 'bowers',
+        //模块根路径
+        baseUrl: '../bower_components/',
+        /*
+        *映射不在根路径下的模块
+        *路径是相对于baseUrl的
+        **/
+        paths: {
+            'underscore': 'underscore/underscore-min',
+            'jquery': 'jquery/dist/jquery.min'
+        },
+        //为非cmd、amd模式的模块声明依赖
+        shim: {
+            'underscore': {
+                deps: ['jquery'],
+                exports: '_'
+            }
+        }
+    });
+    bower(['underscore','jquery'], function(_,$){
+        console.log('bower load over.');
+        var appReq = require.config({
+            context: 'apps',
+            baseUrl: './../src/',
+        });
+        appReq(['p/index/main'],function(){
+            console.log('every thing is ready.');
+        });
+    });
+
+
+</script>
+</html>
