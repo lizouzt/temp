@@ -1,3 +1,3 @@
 define(function(require){
-    console.log('woh');
+    var loadWallpaper = require('c/widget/loadWallpaper');
 });

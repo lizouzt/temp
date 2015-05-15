@@ -13,7 +13,49 @@
 <link rel="stylesheet" type="text/css" href="../src/p/index/index.css">
 </head>
 <body>
-	
+	<header>
+        <div class="h-logo">BT Engine</div>
+        <div class="h-tutorial"><a href="/tutorial">教你观影</a></div>
+        <div class="h-declare"><a href="/declare">声明</a></div>
+        <div class="h-social">
+            <a data-sharing="twitter" href="#" target="_blank">
+                <i class="b-icon i-twitter"></i>
+            </a>
+            <a data-sharing="facebook" href="#" target="_blank">
+                <i class="b-icon i-facebook"></i>
+            </a>
+            <a data-sharing="Google+" href="#" target="_blank">
+                <i class="b-icon i-Google+"></i>
+            </a>
+            <a data-sharing="weibo" href="#" target="_blank">
+                <i class="b-icon i-weibo"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="s-form">
+        <!--search-->
+        <form action="./search" method="POST" name="search">
+            <div class="s-kwd">
+                <input type="text" name="kwd-origin" id="kwdo" autocomplete="off">
+                <input type="hidden" name="kwd-query" autocomplete="off">
+            </div>
+            <div class="s-btn">
+                <button type="submit">搜索种子</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <h4>Copyright &copy; 2015 BTEngine-绿网种子观影神器 版权所有 All Rights Reserved</h4>
+        <h5>反馈: lizouzt@gmail.com</h5>
+        <ul>
+            <li><a href="/about">关于我们</a></li>
+            <li><a href="/about">隐私政策</a></li>
+            <li><a href="/about">FAQ</a></li>
+            <li><a href="/about">DMCA</a></li>
+        </ul>
+    </footer>
 </body>
 <script type="text/javascript" src="../bower_components/requirejs/require.js"></script>
 <script type="text/javascript">
@@ -37,11 +79,12 @@
             }
         }
     });
-    bower(['underscore','jquery'], function(_,$){
+    bower(['jquery'], function(_,$){
         console.log('bower load over.');
         var appReq = require.config({
             context: 'apps',
             baseUrl: './../src/',
+            urlArgs: "bust="+(+new Date)
         });
         appReq(['p/index/main'],function(){
             console.log('every thing is ready.');
