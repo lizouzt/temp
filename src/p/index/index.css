@@ -43,8 +43,65 @@ a {
   clear: both;
 }
 body {
-  background-color: #fff;
+  background: #fff;
   color: #333;
-  font: 100 20px/32px 'Hiragino Sans GB', arial, 'Microsoft Yahei', '微软雅黑', '宋体';
+  font: 100 20px/32px '微软雅黑', '宋体', arial, 'Hiragino Sans GB', 'Microsoft Yahei';
   width: 100%;
+}
+header h1,
+footer h1,
+header h2,
+footer h2,
+header h3,
+footer h3,
+header h4,
+footer h4,
+header h5,
+footer h5 {
+  font-weight: 100;
+}
+header {
+  background-color: #666;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.trantision(all .6s linear) header.active {
+  height: 44px;
+  line-height: 40px;
+}
+.h-logo {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bolder;
+}
+body {
+  -webkit-transition: color 1s ease-in;
+  -moz-transition: color 1s ease-in;
+  -o-transition: color 1s ease-in;
+  transition: color 1s ease-in;
+}
+body.white {
+  color: #fff;
+}
+.s-wp {
+  background: transparent no-repeat center;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+.s-wp.active {
+  opacity: 1;
 }

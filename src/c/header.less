@@ -1,0 +1,108 @@
+@import "./../../bower_components/lesshat/build/lesshat.less";
+@import "./social-icon.less";
+
+@cl-font: #ccc;
+
+header{
+    background-color: #666;
+    background-color: rgba(0,0,0,.6);
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .trantision(all .6s linear)
+    &.active{
+        height: 35px;
+        line-height: 35px;
+    }
+}
+
+.h-logo{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 20px;
+    float: left;
+}
+
+.hr{
+    color: @cl-font;
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    a{
+        display: block;
+    }
+}
+.hrb{
+    display: block;
+    border-top: 2px solid rgb(23, 109, 238);
+}
+.hrt{
+    display: inline;
+    padding: 0 5px;
+    zoom: 1;
+}
+.h-t .hrb{
+    border-top-color: rgb(23, 109, 238);
+}
+.h-d .hrb{
+    border-top-color: rgb(211, 63, 42);
+}
+.h-s .hrb{
+    border-top-color: rgb(255, 180, 3);
+}
+.h-l .hrb{
+    border-top-color: rgb(0, 151, 86);
+}
+
+/**************分享**************/
+.h-s{
+    font-size: 13px;
+    margin-right: 20px;
+    .b-i{
+        font-size: 13px;
+    }
+}
+header {
+    .b-i{
+        color: #ccc;
+        font-size: 16px;
+        padding: 0 10px;
+        &:hover,&.active{
+            color: #fff;
+        }
+    }
+}
+.h-sbtn {
+    .i-facebook{
+        border-left: 1px solid #ccc;
+        margin-left: 20px;
+        padding-left: 20px;
+        &:before{
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+
+.h-sl{
+    font-size: 18px;
+    padding: 0 10px;
+    position: absolute;
+    right: -120px;
+    top: 44px;
+    .transition(right 1s cubic-bezier(0,.4,.7,1));
+    &.active{
+        right: 0;
+    }
+    li{
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+    }
+    .i-facebook{
+        font-size: 20px;
+    }
+}
