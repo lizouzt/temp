@@ -1,4 +1,4 @@
-define("p/index/main", [ "require", "c/configure", "p/index/mod/topList.jst", "c/widget/loadWallPaper" ], function(require, conf, tpl) {
+define("p/index/main", [ "require", "c/configure", "p/index/mod/topList.jst", "c/widget/loadWallPaper", "c/widget/header" ], function(require, conf, tpl) {
     console.log(tpl({
         name: "xxxxxx"
     }));
@@ -49,3 +49,5 @@ define("c/widget/loadWallPaper", [ "require", "c/configure" ], function(require,
         _wall && (_img.src = _url);
     });
 });
+
+define("c/widget/header", [], function(require) {});

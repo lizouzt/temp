@@ -62,8 +62,8 @@ footer h5 {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('http://dev.taoz.com/btengine/static/fonts/icomoon.eot?pspomm');
-  src: url('http://dev.taoz.com/btengine/static/fonts/icomoon.eot?#iefixpspomm') format('embedded-opentype'), url('http://dev.taoz.com/btengine/static/fonts/icomoon.woff?pspomm') format('woff'), url('http://dev.taoz.com/btengine/static/fonts/icomoon.ttf?pspomm') format('truetype'), url('http://dev.taoz.com/btengine/static/fonts/icomoon.svg?pspomm#icomoon') format('svg');
+  src: url('/static/fonts/icomoon.eot?pspomm');
+  src: url('/static/fonts/icomoon.eot?#iefixpspomm') format('embedded-opentype'), url('/static/fonts/icomoon.woff?pspomm') format('woff'), url('/static/fonts/icomoon.ttf?pspomm') format('truetype'), url('/static/fonts/icomoon.svg?pspomm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
