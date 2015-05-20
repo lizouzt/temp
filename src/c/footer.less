@@ -1,3 +1,4 @@
+@import "./../../bower_components/lesshat/build/lesshat.less";
 @import "./var.less";
 
 footer{
@@ -6,11 +7,16 @@ footer{
     color: @cl-f-font;
     bottom: 0;
     font-size: 13px;
+    overflow: hidden;
     padding: 5px 1%; 
     position: absolute;
     width: 98%;
+    .transition(height .6s linear);
+    &.active{
+        height: auto;
+    }
     ul{
-        margin: 0 20px;
+        margin: 0 10px;
         float: right;
         text-align: right;
         overflow: hidden;
@@ -24,6 +30,28 @@ footer{
             margin: 0 10px;
         }
     }
+    a{
+        display: block;
+    }
+}
+
+.fh{
+    display: none;
+    float: right;
+    margin: 0 10px;
+    text-align: center;
+    width: 44px;
+    &.active{
+        .i-paragraph-left{
+            display: none;
+        }
+        .i-paragraph-right{
+            display: inline;
+        }
+    }
+    .i-paragraph-right{
+        display: none;
+    }
 }
 
 /*************Media query**************/
@@ -33,8 +61,35 @@ footer{
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 470px) {
     footer{
-        
+        height: 41px;
+        padding: 0 1%;
+        ul{
+            float: none;
+            margin: 0;
+            text-align: left;
+        }
+        li{
+            border-bottom: 1px solid rgba(0,0,0,.4);
+            float: none;
+            height: 30px;
+            line-height: 30px;
+            padding: 5px 0;
+            &:hover{
+                color: #fff;
+                background-color: @cl-bg;
+            }
+            &:first-child{
+                color: @cl-f-font;
+                background-color: transparent;
+            }
+            em{
+                display: none;
+            }
+        }
+    }
+    .fh{
+        display: block;
     }
 }
