@@ -1,0 +1,40 @@
+@import "./var.less";
+
+footer{
+    background-color: @cl-bg;
+    // background-color: rgba(0,0,0,.6);
+    color: @cl-f-font;
+    bottom: 0;
+    font-size: 13px;
+    padding: 5px 1%; 
+    position: absolute;
+    width: 98%;
+    ul{
+        margin: 0 20px;
+        float: right;
+        text-align: right;
+        overflow: hidden;
+        white-space: nowrap;
+        zoom: 1;
+    }
+    li{
+        float: left;
+        line-height: 1;
+        span{
+            margin: 0 10px;
+        }
+    }
+}
+
+/*************Media query**************/
+@media (max-width: 768px) {
+    footer{
+        background-color: rgba(0,0,0,.6);
+    }
+}
+
+@media (max-width: 500px) {
+    footer{
+        
+    }
+}

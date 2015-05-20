@@ -1,10 +1,9 @@
 @import "./../../bower_components/lesshat/build/lesshat.less";
-@import "./social-icon.less";
 
-@cl-font: #ccc;
+@import "./var.less";
 
 header{
-    background-color: #666;
+    background-color: @cl-bg;
     background-color: rgba(0,0,0,.6);
     height: 40px;
     line-height: 40px;
@@ -27,7 +26,7 @@ header{
 }
 
 .hr{
-    color: @cl-font;
+    color: @cl-h-font;
     display: inline-block;
     float: right;
     font-size: 13px;
@@ -37,23 +36,24 @@ header{
 }
 .hrb{
     display: block;
-    border-top: 2px solid rgb(23, 109, 238);
+    border-top: 2px solid transparent;
+    .transition(border-top-color .4s ease-in);
 }
 .hrt{
     display: inline;
     padding: 0 5px;
     zoom: 1;
 }
-.h-t .hrb{
+.h-t:hover .hrb,.h-t.active .hrb{
     border-top-color: rgb(23, 109, 238);
 }
-.h-d .hrb{
+.h-d:hover .hrb,.h-d.active .hrb{
     border-top-color: rgb(211, 63, 42);
 }
-.h-s .hrb{
+.h-s:hover .hrb,.h-s.active .hrb{
     border-top-color: rgb(255, 180, 3);
 }
-.h-l .hrb{
+.h-l:hover .hrb,.h-l.active .hrb{
     border-top-color: rgb(0, 151, 86);
 }
 
@@ -75,7 +75,7 @@ header {
         }
     }
 }
-.h-sbtn {
+.hsbtn {
     .i-facebook{
         border-left: 1px solid #ccc;
         margin-left: 20px;
@@ -87,7 +87,7 @@ header {
     }
 }
 
-.h-sl{
+.h-sl {
     font-size: 18px;
     padding: 0 10px;
     position: absolute;
@@ -106,3 +106,11 @@ header {
         font-size: 20px;
     }
 }
+
+/*************Media query**************/
+@media (max-width: 414px) {
+    header .hsbtn{
+        display: none;
+    }
+}
+

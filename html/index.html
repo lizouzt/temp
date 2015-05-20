@@ -108,13 +108,13 @@
     </section>
 
     <footer>
-        <h4>Copyright &copy; 2015 BTEngine-绿网种子观影神器 版权所有 All Rights Reserved</h4>
-        <h5>反馈: lizouzt@gmail.com</h5>
         <ul>
-            <li><a href="/about">关于我们</a></li>
-            <li><a href="/about">隐私政策</a></li>
-            <li><a href="/about">FAQ</a></li>
-            <li><a href="/about">DMCA</a></li>
+            <li><span>&copy; 2015 BTEngine</span>|</li>
+            <li><a href="Mailto:lizouzt@gmail.com?Subject=BTEgine FeedBack" target="_blank"><span>Feedback</span>|</a></li>
+            <li><a href="/about" target="_blank"><span>About</span>|</a></li>
+            <li><a href="/about" target="_blank"><span>Privacy</span>|</a></li>
+            <li><a href="/about" target="_blank"><span>Legal</span>|</a></li>
+            <li><a href="/about" target="_blank"><span>FAQ</span></a></li>
         </ul>
     </footer>
 </body>
@@ -144,7 +144,7 @@
         console.log('bower load over.');
         var appReq = require.config({
             context: 'apps',
-            baseUrl: './../build/',
+            baseUrl: './../src/',
             urlArgs: "bust="+(+new Date)
             // urlArgs: '0.113'
         });

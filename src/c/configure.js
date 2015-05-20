@@ -9,7 +9,8 @@ define(function(require){
         BingSourceUrl: 'http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1',
         localBingSourceUrl: '../static/HPImageArchive.json',
         Device: {
-            screen: DevScreen
+            screen: DevScreen,
+            isMobile: true
         }
     }
 });

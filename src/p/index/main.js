@@ -5,5 +5,12 @@ define([
     'c/widget/loadWallPaper',
     'c/widget/header'
     ], function(require,conf,tpl){
-    console.log(tpl({name:'xxxxxx'}));
+    
+    var EventCtl = function(){
+        conf.isMobile && document.body.addEventListener('touchmove', function(e){e.preventDefault()})
+    },
+
+    init = (function(){
+        EventCtl();
+    })();
 });
