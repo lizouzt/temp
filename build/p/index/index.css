@@ -367,6 +367,9 @@ header {
   font-size: 13px;
   margin-right: 20px;
 }
+.h-s.active .h-sl {
+  right: 0;
+}
 .h-s .b-i {
   font-size: 13px;
 }
@@ -398,9 +401,6 @@ header .b-i.active {
   -moz-transition: right 1s cubic-bezier(0, 0.4, 0.7, 1);
   -o-transition: right 1s cubic-bezier(0, 0.4, 0.7, 1);
   transition: right 1s cubic-bezier(0, 0.4, 0.7, 1);
-}
-.h-sl.active {
-  right: 0;
 }
 .h-sl li {
   height: 40px;

@@ -8,7 +8,9 @@ define([
     ], function(require,conf,tpl){
     
     var EventCtl = function(){
-        conf.isMobile && document.body.addEventListener('touchmove', function(e){e.preventDefault()})
+        if(conf.device.isMobile){
+            document.body.addEventListener('touchmove', function(e){e.preventDefault()})
+        }
     },
 
     init = function(){

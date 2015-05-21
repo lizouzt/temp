@@ -8,7 +8,7 @@ define(function(require){
     return {
         BingSourceUrl: 'http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1',
         localBingSourceUrl: '../static/HPImageArchive.json',
-        Device: {
+        device: {
             screen: DevScreen,
             isMobile: true
         }

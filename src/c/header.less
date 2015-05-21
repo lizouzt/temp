@@ -61,6 +61,11 @@ header{
 .h-s{
     font-size: 13px;
     margin-right: 20px;
+    &.active{
+        .h-sl{
+            right: 0;
+        }
+    }
     .b-i{
         font-size: 13px;
     }
@@ -94,9 +99,6 @@ header {
     right: -120px;
     top: 44px;
     .transition(right 1s cubic-bezier(0,.4,.7,1));
-    &.active{
-        right: 0;
-    }
     li{
         height: 40px;
         line-height: 40px;
