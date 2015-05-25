@@ -1,5 +1,5 @@
-@import "./../../bower_components/lesshat/build/lesshat.less";
-@import "./var.less";
+@import "./../../../bower_components/lesshat/build/lesshat.less";
+@import "../../c/var.less";
 
 footer{
     background-color: @cl-bg;
@@ -7,10 +7,12 @@ footer{
     color: @cl-f-font;
     bottom: 0;
     font-size: 13px;
+    min-width: 300px;
     overflow: hidden;
     padding: 5px 1%; 
     position: absolute;
     width: 98%;
+    z-index: 10;
     .transition(height .6s linear);
     &.active{
         height: auto;

@@ -1,8 +1,8 @@
 @import "../../c/config.less";
 @import "../../c/social-icon.less";
-@import "../../c/header.less";
-@import "../../c/footer.less";
-@import "../../p/index/search-form.less";
+@import "../../c/widget/header.less";
+@import "../../c/widget/footer.less";
+@import "../../c/widget/search-form.less";
 
 body{
     background-color: @cl-bg;
@@ -25,5 +25,16 @@ body{
     .transition(opacity 1s ease-in);
     &.active{
         opacity: 1;
+    }
+}
+
+.s-form{
+    margin: 130px auto 40px;
+}
+
+/*************Media query**************/
+@media (max-width: 440px) {
+    .s-form{
+        margin-top: 180px;
     }
 }

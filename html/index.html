@@ -23,13 +23,13 @@
                 <span class="hrt"><i class="b-i i-share2"></i></span>
             </a>
         </div>
-        <div class="hr hsbtn" data-sharing="twitter">
+        <div class="hr hsbtn hst" data-sharing="twitter">
             <a href="#" target="_blank">
                 <span class="hrb"></span>
                 <span class="hrt"><i class="b-i i-twitter"></i></span>
             </a>
         </div>
-        <div class="hr hsbtn" data-sharing="facebook">
+        <div class="hr hsbtn hst" data-sharing="facebook">
             <a href="#" target="_blank">
                 <span class="hrb"></span>
                 <span class="hrt"><i class="b-i i-facebook"></i></span>
@@ -58,25 +58,17 @@
         </div>
 
         <ul class="h-sl" id="hsl">
-            <li>
-                <a data-sharing="twitter" href="#" target="_blank">
-                    <span>Twitter</span>
-                </a>
+            <li data-sharing="twitter" class="hst">
+                <span>Twitter</span>
             </li>
-            <li>
-                <a data-sharing="facebook" href="#" target="_blank">
-                    <span>Facebook</span>
-                </a>
+            <li data-sharing="facebook" class="hst">
+                <span>Facebook</span>
             </li>
-            <li>
-                <a data-sharing="Google+" href="#" target="_blank">
-                    <span>Google+</span>
-                </a>
+            <li data-sharing="Google+" class="hst">
+                <span>Google+</span>
             </li>
-            <li>
-                <a data-sharing="weibo" href="#" target="_blank">
-                    <span>Weibo</span>
-                </a>
+            <li data-sharing="weibo" class="hst">
+                <span>Weibo</span>
             </li>
         </ul>
 
@@ -85,14 +77,21 @@
     <section class="s-form">
         <!--search-->
         <form action="./search" method="POST" name="search">
-            <div class="s-kwd">
-                <input type="text" name="kwd-origin" id="kwdo" autocomplete="off">
-                <input type="hidden" name="kwd-query" autocomplete="off">
-            </div>
             <div class="s-btn">
                 <button type="submit">搜索种子</button>
             </div>
+            <div class="s-kwd">
+                <input type="search" name="kwd-origin" id="kwdo" title="输入搜索词" maxlength="100" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+                <input type="hidden" name="kwd-query" autocomplete="off">
+            </div>
         </form>
+        <div class="s-suggest">
+            <ul class="ss-l">
+                <li>好的</li>
+                <li>好的是不是</li>
+                <li>好的就这世界</li>
+            </ul>
+        </div>
     </section>
 
     <footer id="J-footer">

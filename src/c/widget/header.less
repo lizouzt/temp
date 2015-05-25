@@ -1,16 +1,19 @@
-@import "./../../bower_components/lesshat/build/lesshat.less";
+@import "./../../../bower_components/lesshat/build/lesshat.less";
 
-@import "./var.less";
+@import "../../c/var.less";
 
 header{
     background-color: @cl-bg;
     background-color: rgba(0,0,0,.6);
     height: 40px;
     line-height: 40px;
+    min-width: 320px;
     position: fixed;
     top: 0;
     width: 100%;
-    .trantision(all .6s linear)
+    z-index: 10;
+
+    .transition(all .6s linear);
     &.active{
         height: 35px;
         line-height: 35px;
@@ -61,11 +64,6 @@ header{
 .h-s{
     font-size: 13px;
     margin-right: 20px;
-    &.active{
-        .h-sl{
-            right: 0;
-        }
-    }
     .b-i{
         font-size: 13px;
     }
@@ -91,14 +89,21 @@ header {
         }
     }
 }
-
+.hst{
+    cursor: pointer;
+}
 .h-sl {
+    background-color: @cl-bg;
+    background-color: rgba(0,0,0,.6);
     font-size: 18px;
     padding: 0 10px;
     position: absolute;
     right: -120px;
     top: 44px;
-    .transition(right 1s cubic-bezier(0,.4,.7,1));
+    .transition(right .6s cubic-bezier(0,.4,.7,1));
+    &.active{
+        right: 0;
+    }
     li{
         height: 40px;
         line-height: 40px;
