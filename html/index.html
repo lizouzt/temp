@@ -112,12 +112,12 @@
         </ul>
     </footer>
 </body>
-<script type="text/javascript" src="../bower_components/requirejs/require.js"></script>
+<script type="text/javascript" src="../deps/requirejs/require.js"></script>
 <script type="text/javascript">
     var bower = require.config({
         context: 'bowers',
         //模块根路径
-        baseUrl: '../bower_components/',
+        baseUrl: '../deps/',
         /*
         *映射不在根路径下的模块
         *路径是相对于baseUrl的
@@ -138,7 +138,7 @@
         console.log('bower load over.');
         var appReq = require.config({
             context: 'apps',
-            baseUrl: './../src/',
+            baseUrl: '../src/',
             urlArgs: "bust="+(+new Date)
             // urlArgs: '0.113'
         });
@@ -146,7 +146,5 @@
             console.log('every thing is ready.');
         });
     });
-
-
 </script>
 </html>

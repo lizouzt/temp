@@ -9,6 +9,7 @@
     "lesshat": "~3.0.2",
     "requirejs": "~2.1.17",
     "underscore": "~1.8.3",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "Libo0_0": "git://github.com/lizouzt/Libo0_0.git"
   }
 }

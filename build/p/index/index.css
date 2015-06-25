@@ -64,8 +64,8 @@ footer h5 {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('/static/fonts/icomoon.eot?pspomm');
-  src: url('/static/fonts/icomoon.eot?#iefixpspomm') format('embedded-opentype'), url('/static/fonts/icomoon.woff?pspomm') format('woff'), url('/static/fonts/icomoon.ttf?pspomm') format('truetype'), url('/static/fonts/icomoon.svg?pspomm#icomoon') format('svg');
+  src: url('//git.com/btengine/static/fonts/icomoon.eot?pspomm');
+  src: url('//git.com/btengine/static/fonts/icomoon.eot?#iefixpspomm') format('embedded-opentype'), url('//git.com/btengine/static/fonts/icomoon.woff?pspomm') format('woff'), url('//git.com/btengine/static/fonts/icomoon.ttf?pspomm') format('truetype'), url('//git.com/btengine/static/fonts/icomoon.svg?pspomm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
