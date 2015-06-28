@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= srcBase %>',
-          src: ['p/**/*.less','!c/*.less','!c/**/*.less','!common/**/*.less','!**/mod/*.less','!mod/**/*.less','!mod/*.less','!util/**/*.less'],
+          src: ['p/**/*.less','!c/*.less','!c/deps/**.less','!c/**/*.less','!**/mod/*.less','!mod/**/*.less','!mod/*.less','!util/**/*.less'],
           dest: '<%= buildBase %>',
           ext: '.css'
         }]
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       combine: {
         expand: true,
         cwd: '<%= buildBase %>',
-        src: ['**/*.css', '!**/*-min.css'],
+        src: ['**/*.css', '!**/*-min.css', '!c/deps/**/*.less'],
         dest: '<%= buildBase %>',
         ext: '-min.css'
       }
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: '<%= srcBase %>',
-        src: ['c/common/**/*.js'],
+        src: ['c/deps/**/*.js'],
         dest: '<%= buildBase %>'
       }
     },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
       trans: {
         expand: true,
         cwd: '<%= srcBase %>',
-        src: ['**/*.js', '!**/*-min.js', '!c/common/**/*.js'],
+        src: ['**/*.js', '!**/*-min.js', '!c/deps/**/*.js'],
         dest: '<%= tempBase %>'
       }
     },
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
       build: {
         expand: true,
         cwd: '<%= buildBase %>',
-        src: ['**/*.js','!**/*-min.js'],
+        src: ['**/*.js','!**/*-min.js','!c/deps/**/*.js'],
         dest: '<%= buildBase %>',
         ext: '-min.js'
       }
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= srcBase %>/{,*/}*.js'
+        '<%= build %>/{,*/}*.js'
       ]
     },
 
@@ -152,9 +152,9 @@ module.exports = function(grunt) {
     'jst', 
     'transport', 
     'concat', 
+    'uglify',
     'less', 
     'cssmin', 
-    'uglify',
     'clean'
   ]);
 

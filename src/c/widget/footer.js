@@ -1,4 +1,4 @@
-define(function(require){
+define(function(){
     var hockBtn = document.getElementById('J-fh'),
         footer = document.getElementById('J-footer');
 

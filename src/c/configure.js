@@ -1,4 +1,4 @@
-define(function(require){
+define(function(){
     var devicePixelRatio = window.devicePixelRatio || 1,
     DevScreen = {
         w: document.documentElement.clientWidth * devicePixelRatio,

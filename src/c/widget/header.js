@@ -1,4 +1,4 @@
-define(function(require){
+define(function(){
     var ShareList = {
         weibo: 'http://service.weibo.com/share/share.php?content=utf-8&url=<%=url%>&title=<%=content%>',
         facebook: 'https://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%=url%>',

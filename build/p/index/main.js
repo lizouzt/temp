@@ -1,4 +1,4 @@
-define("p/index/main", [ "require", "c/configure", "p/index/mod/topList.jst", "c/widget/loadWallPaper", "c/widget/header", "c/widget/footer" ], function(require, conf, tpl) {
+define("p/index/main", [ "c/configure", "p/index/mod/topList.jst", "c/widget/loadWallPaper", "c/widget/header", "c/widget/footer" ], function(conf, tpl) {
     var EventCtl = function() {
         if (conf.device.isMobile) {
             document.body.addEventListener("touchmove", function(e) {
@@ -10,7 +10,7 @@ define("p/index/main", [ "require", "c/configure", "p/index/mod/topList.jst", "c
     }();
 });
 
-define("c/configure", [], function(require) {
+define("c/configure", [], function() {
     var devicePixelRatio = window.devicePixelRatio || 1, DevScreen = {
         w: document.documentElement.clientWidth * devicePixelRatio,
         h: document.documentElement.clientHeight * devicePixelRatio
@@ -36,7 +36,7 @@ define("p/index/mod/topList.jst", [], function() {
     };
 });
 
-define("c/widget/loadWallPaper", [ "require", "c/configure" ], function(require, conf) {
+define("c/widget/loadWallPaper", [ "c/configure" ], function(conf) {
     var load = function(cb) {
         $.ajax({
             url: conf.localBingSourceUrl,
@@ -57,7 +57,7 @@ define("c/widget/loadWallPaper", [ "require", "c/configure" ], function(require,
     });
 });
 
-define("c/widget/header", [], function(require) {
+define("c/widget/header", [], function() {
     var ShareList = {
         weibo: "http://service.weibo.com/share/share.php?content=utf-8&url=<%=url%>&title=<%=content%>",
         facebook: "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%=url%>",
@@ -81,7 +81,7 @@ define("c/widget/header", [], function(require) {
     }();
 });
 
-define("c/widget/footer", [], function(require) {
+define("c/widget/footer", [], function() {
     var hockBtn = document.getElementById("J-fh"), footer = document.getElementById("J-footer");
     var EventCtl = function() {
         "addEventListener" in window && hockBtn.addEventListener("click", function(e) {

@@ -112,39 +112,36 @@
         </ul>
     </footer>
 </body>
-<script type="text/javascript" src="../deps/requirejs/require.js"></script>
+<script type="text/javascript" src="../build/c/deps/requirejs/require.js"></script>
+<script src="./../build/p/index/main-min.js"></script>
 <script type="text/javascript">
-    var bower = require.config({
-        context: 'bowers',
+    requirejs.config({
         //模块根路径
-        baseUrl: '../deps/',
+        baseUrl: '../build/',
         /*
-        *映射不在根路径下的模块
+        *映射不在根路径下的
         *路径是相对于baseUrl的
         **/
         paths: {
-            'underscore': 'underscore/underscore-min',
-            'jquery': 'jquery/dist/jquery.min'
+            'underscore': './c/deps/underscore/underscore-min',
+            'jquery': './c/deps/jquery/dist/jquery.min',
+            'backbone': './c/deps/backbone/backbone-min'
         },
-        //为非cmd、amd模式的模块声明依赖
+        // 为非cmd、amd模式的模块声明依赖
         shim: {
             'underscore': {
-                deps: ['jquery'],
                 exports: '_'
-            }
+            },
+            'backbone': {
+                deps: ['underscore','jquery'],
+                exports: 'Backbone'
+            },
         }
     });
-    bower(['underscore'], function(_,$){
-        console.log('bower load over.');
-        var appReq = require.config({
-            context: 'apps',
-            baseUrl: '../src/',
-            urlArgs: "bust="+(+new Date)
-            // urlArgs: '0.113'
-        });
-        appReq(['p/index/main'],function(){
-            console.log('every thing is ready.');
-        });
+
+    require(['backbone','jquery'],function(){
+        require(['p/index/main']);
     });
 </script>
+
 </html>

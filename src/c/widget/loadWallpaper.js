@@ -1,4 +1,4 @@
-define(['require','c/configure'],function(require,conf){
+define(['c/configure'],function(conf){
     var load = function(cb){
         $.ajax({
             url: conf.localBingSourceUrl,
