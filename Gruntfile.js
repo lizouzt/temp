@@ -176,7 +176,7 @@ module.exports = function(grunt) {
     'concat',
     'copy',
     'uglify',
-    // 'clean'
+    'clean'
   ]);
 
   grunt.registerTask('sync', ['browserSync','watch']);
