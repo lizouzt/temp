@@ -1,0 +1,5 @@
+/*! btengine 2015-06-30 */
+ /**********************************************
+ * Handcrafted by Wooha•Yeo, 
+ **********************************************/
+define("c/widget/loadWallPaper",["c/configure"],function(a){var b=function(b){$.ajax({url:a.localBingSourceUrl,success:function(a){b&&b(a.images)}})};b(function(a){var b=a[0].url,c=document.createElement("img"),d=document.getElementById("wall");c.onload=function(){d.style.backgroundImage="url("+b+")",d.className+=" active",document.body.className+="white",delete c},d&&(c.src=b)})}),define("c/configure",[],function(){var a=window.devicePixelRatio||1,b={w:document.documentElement.clientWidth*a,h:document.documentElement.clientHeight*a};return{BingSourceUrl:"http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1",localBingSourceUrl:"../static/HPImageArchive.json",device:{screen:b,isMobile:!0}}});

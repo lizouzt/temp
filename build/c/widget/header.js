@@ -1,0 +1,5 @@
+/*! btengine 2015-06-30 */
+ /**********************************************
+ * Handcrafted by Wooha•Yeo, 
+ **********************************************/
+define("c/widget/header",[],function(){var a={weibo:"http://service.weibo.com/share/share.php?content=utf-8&url=<%=url%>&title=<%=content%>",facebook:"https://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%=url%>",twitter:"https://twitter.com/intent/tweet?text=<%=content%><%=url%>&source=webclient",google:"https://plus.google.com/share?url=<%=url%>"},b=function(){$("header").on("click",".hst",function(b){b.preventDefault(),b.stopPropagation();var c=this.getAttribute("data-sharing"),d=window.location.href,e=document.title,f=a[c].replace("<%=url%>",d).replace("<%=content%>",e);window.open(f,"_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=no, resizable=yes, copyhistory=yes, width=600, height=600")}),$(".h-s").on("click",function(){$(this).toggleClass("active"),$("#hsl").toggleClass("active")})};(function(){b()})()});
